@@ -59,7 +59,8 @@ ul {
 }
 
 .section {
-  padding: 94px 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
   text-align: center;
 }
 
@@ -135,6 +136,7 @@ ul {
 }
 
 /* псевдоселектор сусіда */
+
 .nav-item + .nav-item {
   margin-left: 50px;
 }
@@ -175,10 +177,21 @@ ul {
 /* Title */
 
 .hero {
-  padding: 200px 0;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   text-align: center;
   background-color: var(--dark-background-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero-background.jpg');
+  max-width: 1600px;
+  height: 600px;
+  background-size: auto;
+  background-position: center;
 }
 
 .hero-title {
@@ -211,6 +224,9 @@ ul {
 }
 
 /* Features +  Description */
+.features {
+  padding-bottom: 47px;
+}
 
 .features-title {
   margin-bottom: 10px;
@@ -237,12 +253,36 @@ ul {
 }
 
 .features-item {
-  width: 270px;
+  flex-basis: calc((100% - 90px) / 4);
   text-align: left;
 }
 
+.features-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--light-background-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-satellite::before {
+}
+
+.icon-clock::before {
+}
+
+.icon-laptop::before {
+}
+
+.icon-astronaut::before {
+}
+
 .description {
-  padding-top: 0;
+  padding-top: 47px;
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 /* Team */
@@ -263,10 +303,12 @@ ul {
   background-color: var(--primary-background-color);
   text-align: center;
   border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 90px) / 4);
 }
 
 .team-text-item {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-title {
@@ -366,12 +408,12 @@ ul {
 
 .examples-item {
   display: flex;
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .examples-content {
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
+  border-top: none;
   padding: 20px 24px;
   text-align: left;
 }
