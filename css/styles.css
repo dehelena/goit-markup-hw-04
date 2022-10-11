@@ -300,6 +300,11 @@ ul {
   padding-top: 0px;
 }
 
+.description-image {
+  display: flex;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
 /* Team */
 
 .team {
@@ -323,6 +328,7 @@ ul {
 
 .team-text-item {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-title {
@@ -346,7 +352,6 @@ ul {
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-bottom: 30px;
 }
 
 .social-link {
