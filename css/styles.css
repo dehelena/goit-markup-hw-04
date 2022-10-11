@@ -157,28 +157,30 @@ ul {
 
 /* Contacts */
 
-.contacts-link {
-  color: var(--primary-text-color);
-  margin-left: 10px;
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--accent-color);
-}
-
 .contacts {
   display: flex;
   margin-left: auto;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
 }
 
 .contacts-item + .contacts-item {
   margin-left: 30px;
 }
 
-.contacts-item {
+.contacts-link {
   display: flex;
+  gap: 10px;
   align-items: center;
+  color: var(--primary-text-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
 }
 
 .contacts-icon-envelope {
@@ -192,11 +194,7 @@ ul {
 }
 
 .contacts-icon {
-  color: var(--primary-text-color);
-}
-
-.contacts-icon:hover {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* Title */
@@ -217,10 +215,14 @@ ul {
   max-width: 1600px;
   height: 600px;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .hero-title {
-  margin: 0 auto 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   width: 696px;
 
   color: var(--primary-background-color);
@@ -249,9 +251,6 @@ ul {
 }
 
 /* Features +  Description */
-.features {
-  padding-bottom: 47px;
-}
 
 .features-title {
   margin-bottom: 10px;
@@ -285,22 +284,12 @@ ul {
 .features-icon-block {
   display: flex;
   justify-content: center;
-  padding: 25px 100px;
+  height: 120px;
+  align-items: center;
   background-color: var(--light-background-color);
   border-radius: 4px;
   margin-bottom: 30px;
 }
-
-/* .features-item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: var(--light-background-color);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
 .icon-features {
   width: 70px;
@@ -308,8 +297,7 @@ ul {
 }
 
 .description {
-  padding-top: 47px;
-  flex-basis: calc((100% - 60px) / 3);
+  padding-top: 0px;
 }
 
 /* Team */
@@ -335,7 +323,6 @@ ul {
 
 .team-text-item {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .team-title {
@@ -355,34 +342,34 @@ ul {
   margin-bottom: 16px;
 }
 
-.team-link {
+.team-link-list {
   display: flex;
   gap: 10px;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .social-link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
-  justify-content: center;
-  align-items: center;
-}
 
-.social-link:hover {
-  color: var(--primary-background-color);
-  background-color: var(--accent-color);
-  border-radius: 50%;
+  color: #afb1b8;
 }
 
 .icon-social-link {
-  fill: #afb1b8;
+  fill: currentColor;
   height: 20px;
   width: 20px;
 }
 
-.icon-social-link:hover {
-  fill: var(--primary-background-color);
+.social-link:hover,
+.social-link:focus {
+  color: var(--primary-background-color);
+  background-color: var(--accent-color);
+  border-radius: 50%;
 }
 
 /* Clients */
@@ -390,28 +377,34 @@ ul {
 .clients-list {
   display: flex;
   gap: 30px;
+  align-items: center;
+}
+
+.clients-element {
+  width: 170px;
+  height: 92px;
 }
 
 .clients-link {
   display: flex;
-  padding: 32px 16px;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
 }
 
 .icon-clients-link {
-  display: flex;
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
-}
-
-.icon-clients-link:hover {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* Footer */
@@ -425,6 +418,7 @@ ul {
 
 .footer-full {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -459,7 +453,6 @@ ul {
 }
 
 .footer-right-part {
-  margin-top: 12px;
   margin-left: 70px;
 }
 
@@ -531,8 +524,8 @@ ul {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.examples-item:hover,
-.examples-item:focus {
+.examples-link:hover,
+.examples-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
