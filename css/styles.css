@@ -363,7 +363,7 @@ ul {
   border-radius: 50px;
 }
 
-.icon-social-link {
+.social-link-icon {
   fill: #afb1b8;
   height: 20px;
   width: 20px;
@@ -374,8 +374,8 @@ ul {
   background-color: var(--accent-color);
 }
 
-.social-link:hover .icon-social-link,
-.social-link:focus .icon-social-link {
+.social-link:hover .social-link-icon,
+.social-link:focus .social-link-icon {
   fill: var(--primary-background-color);
   background-color: var(--accent-color);
 }
@@ -403,14 +403,14 @@ ul {
   border-radius: 4px;
 }
 
-.icon-clients-link {
+.clients-link-icon {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
 }
 
-.clients-link:hover .icon-clients-link,
-.clients-link:focus .icon-clients-link {
+.clients-link:hover .clients-link-icon,
+.clients-link:focus .clients-link-icon {
   fill: var(--accent-color);
 }
 
