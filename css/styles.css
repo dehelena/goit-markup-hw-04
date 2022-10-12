@@ -360,21 +360,24 @@ ul {
   justify-content: center;
   width: 44px;
   height: 44px;
-
-  color: #afb1b8;
+  border-radius: 50px;
 }
 
 .icon-social-link {
-  fill: currentColor;
+  fill: #afb1b8;
   height: 20px;
   width: 20px;
 }
 
 .social-link:hover,
 .social-link:focus {
-  color: var(--primary-background-color);
   background-color: var(--accent-color);
-  border-radius: 50%;
+}
+
+.social-link:hover .icon-social-link,
+.social-link:focus .icon-social-link {
+  fill: var(--primary-background-color);
+  background-color: var(--accent-color);
 }
 
 /* Clients */
@@ -398,18 +401,17 @@ ul {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  color: #afb1b8;
-}
-
-.clients-link:hover,
-.clients-link:focus {
-  color: var(--accent-color);
 }
 
 .icon-clients-link {
   width: 106px;
   height: 60px;
-  fill: currentColor;
+  fill: #afb1b8;
+}
+
+.clients-link:hover .icon-clients-link,
+.clients-link:focus .icon-clients-link {
+  fill: var(--accent-color);
 }
 
 /* Footer */
